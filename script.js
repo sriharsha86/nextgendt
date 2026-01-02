@@ -69,3 +69,17 @@ document.getElementById("exploreBtn")?.addEventListener("click", () => {
 document.getElementById("contactBtn")?.addEventListener("click", () => {
   scrollToSection("contact");
 });
+/* MOBILE MENU TOGGLE */
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("show");
+});
+
+/* Close menu on link click */
+mobileMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("show");
+  });
+});
