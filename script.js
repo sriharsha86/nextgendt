@@ -54,3 +54,18 @@ document.getElementById("exploreBtn").addEventListener("click", () => {
 document.getElementById("contactBtn").addEventListener("click", () => {
   document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 });
+
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+document.getElementById("exploreBtn")?.addEventListener("click", () => {
+  scrollToSection("capabilities");
+});
+
+document.getElementById("contactBtn")?.addEventListener("click", () => {
+  scrollToSection("contact");
+});
